@@ -1,6 +1,6 @@
 variable "region" {
   type        = string
-  description = "Deafult Region For Terraform"
+  description = "Default Region For Terraform"
 }
 
 variable "vpc_name" {
