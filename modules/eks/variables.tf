@@ -27,3 +27,18 @@ variable "eks_cluster_name" {
   type        = string
   description = "Name of the EKS Cluster"
 }
+
+variable "eks_worker_iam_role_name" {
+  type        = string
+  description = "EKS Cluster Worker IAM Role Name"
+}
+
+variable "eks_worker_instance_profile_name" {
+  type        = string
+  description = "EKS Cluster Worker IAM Instance Profile Name"
+}
+
+variable "eks_worker_cluster_sg" {
+  type        = string
+  description = "EKS Cluster Worker IAM Instance Profile Name"
+}
