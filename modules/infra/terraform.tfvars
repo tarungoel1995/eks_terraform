@@ -1,4 +1,4 @@
-region = "us-west-1"
+region = "us-east-1"
 
 ## VPC Details
 vpc_name = "main_eks_istio"
@@ -23,3 +23,6 @@ nat_name = "nat"
 ## Route Table
 public_rt_name = "public_rt"
 private_rt_name = "private_rt"
+
+##Terraform backend
+backend_bucket_name = "tarunlovedeepterraform"

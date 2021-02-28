@@ -77,3 +77,8 @@ variable "private_rt_name" {
   type        = string
   description = "Private Route Table Name"
 }
+
+variable "backend_bucket_name" {
+  type        = string
+  description = "Bucket Name for terraform backend"
+}

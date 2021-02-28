@@ -8,7 +8,7 @@ resource "aws_subnet" "Public_1a" {
   }
 }
 
-esource "aws_subnet" "Public_1b" {
+resource "aws_subnet" "Public_1b" {
   vpc_id     = aws_vpc.main_eks_istio.id
   cidr_block = var.pubsub_cidr_1b
 
