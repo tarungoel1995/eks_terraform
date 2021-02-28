@@ -4,6 +4,7 @@ resource "aws_vpc" "main_eks_istio" {
 
   tags = {
     Name = var.vpc_name
+    Type = "vpc"
     Creator = "terraform"
   }
 }

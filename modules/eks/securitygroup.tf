@@ -20,7 +20,7 @@ resource "aws_security_group_rule" "eks-cluster-ingress-node-https" {
   from_port                = 443
   protocol                 = "tcp"
   security_group_id        = aws_security_group.eks_cluster_sg.id
-  cidr_blocks              = [data.aws_subnet.selected_private.cidr_blocks]
+  cidr_blocks              = ["10.1.3.0/24", "10.1.4.0/24"]
   to_port                  = 443
   type                     = "ingress"
 }
