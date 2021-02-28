@@ -5,6 +5,7 @@ resource "aws_subnet" "Public_1a" {
 
   tags = {
     Name = var.pubsub_1a
+    Type = "Public"
     Creator = "terraform"
   }
 }
@@ -16,6 +17,7 @@ resource "aws_subnet" "Public_1b" {
 
   tags = {
     Name = var.pubsub_1b
+    Type = "Public"
     Creator = "terraform"
   }
 }
@@ -27,6 +29,7 @@ resource "aws_subnet" "Private_1a" {
 
   tags = {
     Name = var.privsub_1a
+    Type = "Private"
     Creator = "terraform"
   }
 }
@@ -38,6 +41,7 @@ resource "aws_subnet" "Private_1b" {
 
   tags = {
     Name = var.privsub_1b
+    Type = "Private"
     Creator = "terraform"
   }
 }
