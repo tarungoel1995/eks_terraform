@@ -42,3 +42,8 @@ variable "eks_worker_cluster_sg" {
   type        = string
   description = "EKS Cluster Worker IAM Instance Profile Name"
 }
+
+variable "subnet_ids" {
+  type        = list(string)
+  description = "Subnet ID's coming from Control Plane"
+}

@@ -15,3 +15,7 @@ eks_worker_instance_profile_name = "istio_eks_worker_instance_profile"
 eks_worker_cluster_sg = "istio_eks_worker_cluster_sg"
 
 workstation_ip = "103.206.101.209/32"
+
+subnet_ids = distinct(flatten([
+    for s in data.terraform_remote_state.infra.outputs.subnets : values(s)
+    ]))

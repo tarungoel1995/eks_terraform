@@ -5,6 +5,16 @@ data "aws_vpc" "selected" {
   }
 }
 
+data "terraform_remote_state" "infra" {
+
+  backend = "s3"
+  config = {
+    region = "us-east-1"
+    bucket = "tarunlovedeepterraform"
+    key    = "vpc/terraform.tfstate"
+  }
+}
+
 #data "aws_subnet" "selected_private" {
 #  tags = {
 #    Type = "Private"
