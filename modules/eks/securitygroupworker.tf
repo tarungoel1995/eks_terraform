@@ -31,7 +31,7 @@ resource "aws_security_group_rule" "eks-worker-cluster-ingress-cluster" {
   from_port                = 1025
   protocol                 = "tcp"
   security_group_id        = aws_security_group.eks_worker_cluster_sg.id
-  cidr_blocks              = ["10.1.1.0/24", "10.1.2.0/24"]
+  cidr_blocks              = ["10.1.1.0/24", "10.1.2.0/24", "10.1.3.0/24", "10.1.4.0/24"]
   to_port                  = 65535
   type                     = "ingress"
 }

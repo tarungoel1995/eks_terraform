@@ -8,9 +8,12 @@ resource "aws_eks_node_group" "eks-node-group" {
     max_size     = var.max-size
     min_size     = var.min-size
   }
-  instance_types = [
-    var.node-instance-type
-  ]
+  remote_access {
+    ec2_ssh_key     = var.ec2-key-pair
+  }
+
+  instance_types = var.node-spot-instance-type
+  capacity_type = var.node-capacity-type
   # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.
   # Otherwise, EKS will not be able to properly delete EC2 Instances and Elastic Network Interfaces.
   depends_on = [

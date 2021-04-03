@@ -61,8 +61,20 @@ variable "min-size" {
   description = "Autoscaling Minimum node capacity"
 }
 
-variable "node-instance-type" {
-  default     = "t2.micro"
+variable "ec2-key-pair" {
+  default     = "deployer-key"
+  type        = string
+  description = "Key Pair Name"
+}
+
+variable "node-spot-instance-type" {
+  type        = list(string)
+  description = "Worker Node EC2 instance type"
+  default     = ["t2.micro", "t3.micro"] 
+}
+
+variable "node-capacity-type" {
+  default     = "SPOT"
   type        = string
   description = "Worker Node EC2 instance type"
 }
