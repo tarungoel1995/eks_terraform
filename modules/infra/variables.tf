@@ -8,6 +8,11 @@ variable "vpc_name" {
   description = "VPC Name"
 }
 
+variable "dhcp_name" {
+  type        = string
+  description = "DHCP Name"
+}
+
 variable "vpc_cidr" {
   type        = string
   description = "VPC CIDR"

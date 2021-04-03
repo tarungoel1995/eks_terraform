@@ -3,7 +3,7 @@ region = "us-east-1"
 ## VPC Details
 vpc_name = "main_eks_istio"
 vpc_cidr = "10.1.0.0/16"
-
+dhcp_name = "main_eks"
 ## Subnet Details
 pubsub_1a = "Public_1a"
 pubsub_cidr_1a = "10.1.1.0/24"
