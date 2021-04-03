@@ -29,7 +29,9 @@ resource "aws_instance" "bastion" {
   ami           = "ami-042e8287309f5df03"
   instance_type = "t2.micro"
   key_name      = aws_key_pair.deployer.key_name
-  subnet_id              = aws_subnet.Public_1b.id
+  subnet_id     = aws_subnet.Public_1b.id
+  associate_public_ip_address = true
+  vpc_security_group_ids = aws_security_group.eks_bastion_sg.id
 
   tags = {
     Creator = "terraform"
