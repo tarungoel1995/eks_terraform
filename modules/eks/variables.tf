@@ -44,7 +44,7 @@ variable "eks_worker_cluster_sg" {
 }
 
 variable "desired-capacity" {
-  default     = 1
+  default     = 2
   type        = string
   description = "Autoscaling Desired node capacity"
 }
