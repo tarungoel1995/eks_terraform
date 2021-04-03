@@ -1,5 +1,5 @@
 resource "aws_security_group" "eks_bastion_sg" {
-  name        = var.eks_bastion_sg
+  name        = "bastion_sg"
   description = "Security group for bastion in the cluster"
   vpc_id      = aws_vpc.main_eks_istio.id
 
@@ -21,6 +21,7 @@ resource "aws_security_group_rule" "eks-bastion-ingress" {
   protocol                 = "-1"
   cidr_blocks              = ["0.0.0.0/0"]
   to_port                  = 22
+  security_group_id        = aws_security_group.eks_bastion_sg.id
   type                     = "ingress"
 }
 
