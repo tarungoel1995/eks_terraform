@@ -43,7 +43,26 @@ variable "eks_worker_cluster_sg" {
   description = "EKS Cluster Worker IAM Instance Profile Name"
 }
 
-#variable "sub_ids" {
-#  type        = list(string)
-# description = "Subnet ID's coming from Control Plane"
-#}
+variable "desired-capacity" {
+  default     = 1
+  type        = string
+  description = "Autoscaling Desired node capacity"
+}
+
+variable "max-size" {
+  default     = 2
+  type        = string
+  description = "Autoscaling maximum node capacity"
+}
+
+variable "min-size" {
+  default     = 1
+  type        = string
+  description = "Autoscaling Minimum node capacity"
+}
+
+variable "node-instance-type" {
+  default     = "t2.micro"
+  type        = string
+  description = "Worker Node EC2 instance type"
+}
