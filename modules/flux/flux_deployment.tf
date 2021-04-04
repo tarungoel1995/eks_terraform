@@ -50,13 +50,16 @@ resource "kubernetes_deployment" "flux-dep" {
             name       = "git-keygen"
             mount_path = "/var/fluxd/keygen"
           }
+          volume_mount {
+            name = "ssh-config"
+            mount_path = "~/.ssh"
+          }
           args = [
-            "--ssh-keygen-dir=/var/fluxd/keygen",
-            "--git-url=git@github.com:lkravi/fluxcd-demo.git",
+            "--git-url=git@github.com:tarungoel1995/fluxcd-demo.git",
             "--git-branch=master",
             "--git-path=workloads",
             "--git-label=flux",
-            "--git-email=lkravi@users.noreply.github.com",
+            "--git-email=tarun.goel1995@gmail.com",
             "--listen-metrics=:3031",
             "--git-poll-interval=2m",
             "--sync-interval=2m",

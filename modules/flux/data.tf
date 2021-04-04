@@ -16,6 +16,10 @@ data "terraform_remote_state" "eks_cluster" {
   }
 }
 
+data "aws_secretsmanager_secret_version" "git_ssh" {
+  secret_id = "ref/github_ssh"
+}
+
 data "aws_eks_cluster_auth" "eks-demo-cluster-auth" {
   name = data.terraform_remote_state.eks_cluster.outputs.eks_cluster_name
 }

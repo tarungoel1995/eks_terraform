@@ -70,7 +70,7 @@ variable "ec2-key-pair" {
 variable "node-spot-instance-type" {
   type        = list(string)
   description = "Worker Node EC2 instance type"
-  default     = ["t2.micro", "t3.micro"] 
+  default     = ["t3a.medium", "t3.medium"] 
 }
 
 variable "node-capacity-type" {

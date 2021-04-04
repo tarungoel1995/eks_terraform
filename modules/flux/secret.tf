@@ -3,5 +3,7 @@ resource "kubernetes_secret" "flux-secret" {
     name      = "flux-git-deploy"
     namespace = var.namespace
   }
-  type = "Opaque"
+  data = {
+    identity = format("%s\n", data.aws_secretsmanager_secret_version.git_ssh.secret_string)
+  }
 }
