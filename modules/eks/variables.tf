@@ -78,3 +78,8 @@ variable "node-capacity-type" {
   type        = string
   description = "Worker Node EC2 instance type"
 }
+
+variable "backend_bucket_name" {
+  type        = string
+  description = "Bucket Name for terraform backend"
+}

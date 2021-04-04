@@ -83,7 +83,12 @@ variable "private_rt_name" {
   description = "Private Route Table Name"
 }
 
-variable "backend_bucket_name" {
-  type        = string
-  description = "Bucket Name for terraform backend"
+variable "AMIS" {
+  type = map(string)
+  default = {
+    us-east-1 = "ami-042e8287309f5df03"
+    us-east-2 = "ami-08962a4068733a2b6"
+    us-west-2 = "ami-06b94666"
+    eu-west-1 = "ami-844e0bf7"
+  }
 }

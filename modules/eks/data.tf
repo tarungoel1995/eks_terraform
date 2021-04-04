@@ -1,8 +1,8 @@
 data "terraform_remote_state" "infra" {
   backend = "s3"
   config = {
-    region = "us-east-1"
-    bucket = "tarunlovedeepterraform"
+    region = var.region
+    bucket = var.backend_bucket_name
     key    = "vpc/terraform.tfstate"
   }
 }

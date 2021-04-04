@@ -17,3 +17,8 @@ variable "memcache_image" {
   type        = string
   description = "Name of the memcache_image image"
 }
+
+variable "backend_bucket_name" {
+  type        = string
+  description = "Bucket Name for terraform backend"
+}
