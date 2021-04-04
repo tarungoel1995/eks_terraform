@@ -56,7 +56,7 @@ resource "kubernetes_deployment" "flux-dep" {
           }
           args = [
             "--git-url=git@github.com:tarungoel1995/fluxcd-demo.git",
-            "--git-branch=master",
+            "--git-branch=main",
             "--git-path=workloads",
             "--git-label=flux",
             "--git-email=tarun.goel1995@gmail.com",
