@@ -8,4 +8,8 @@ resource "kubernetes_namespace" "flux-ns" {
     }
     name = var.namespace
   }
+  provisioner "local-exec" {
+    when       = destroy
+    command    = "kubectl delete all --all -n ingress-nginx --cascade=true --wait=false && sleep 120"
+  }
 }

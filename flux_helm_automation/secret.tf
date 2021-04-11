@@ -1,6 +1,6 @@
 resource "kubernetes_secret" "git_ssh" {
   metadata {
-    name      = "git-ssh"
+    name      = "github-ssh"
     namespace = var.namespace
   }
   data = {

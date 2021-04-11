@@ -137,7 +137,7 @@ git:
   #      rm ./identity
   # 4. Add ./identity.pub as a deployment key with write access in your Git repo
   # 5. Set the secret name (flux-ssh) below
-  secretName: "gitlab-ssh"
+  secretName: ""
   # The default secret data key for storing the Git repository deploy key
   # is "identity" which must match the filename in the steps for supplying
   # your own SSH deploy key (see secretName above).  Use this field if you

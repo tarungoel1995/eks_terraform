@@ -16,7 +16,7 @@ resource "helm_release" "flux" {
     }
 
     set {
-        name    = "git.ssh.secretName"
+        name    = "git.secretName"
         value   = kubernetes_secret.git_ssh.metadata.0.name
     }
 

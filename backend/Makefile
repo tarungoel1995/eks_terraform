@@ -1,3 +1,6 @@
+env:
+	export AWS_PROFILE=tl
+
 clean:
 	rm -rf .terraform
 
@@ -11,6 +14,7 @@ apply:
 	terraform apply
 
 all:
+	make env
 	make clean
 	make init
 	make apply
